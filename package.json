@@ -1,13 +1,11 @@
 {
-  "name": "bs-let",
+  "name": "@atvero/bs-let",
   "version": "0.1.17",
   "description": "A PPX for async/await (and general monadic binding) in ReasonML.",
-  "repository": "https://github.com/atvero/bs-let",
+  "repository": "https://github.com/atvero/bs-let.git",
   "license": "MIT",
-  "scripts": {
-    "postinstall": "node ./copyPlatformBinaryInPlace.js"
-  },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
   }
 }
