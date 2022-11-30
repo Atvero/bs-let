@@ -142,7 +142,6 @@ jobs:
         run: |
           mkdir -p release
           mv binaries/darwin/bin.exe release/bs-let-darwin-x64.exe
-          mv binaries/windows/bin.exe release/bs-let-win-x64.exe
           mv binaries/linux/bin.exe release/bs-let-linux-x64.exe
           mv package.json release/package.json
           mv copyPlatformBinaryInPlace.js release/copyPlatformBinaryInPlace.js
