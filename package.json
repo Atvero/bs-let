@@ -1,6 +1,6 @@
 {
   "name": "@atvero/bs-let",
-  "version": "0.1.17",
+  "version": "0.1.18-atv",
   "description": "A PPX for async/await (and general monadic binding) in ReasonML.",
   "repository": "https://github.com/atvero/bs-let.git",
   "license": "MIT",

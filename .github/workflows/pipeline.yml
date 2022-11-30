@@ -61,7 +61,7 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
-        os: [windows-latest, macOS-latest]
+        os: [macOS-latest]
 
     steps:
       - uses: actions/checkout@v2
@@ -137,13 +137,6 @@ jobs:
           name: macOS-latest
           path: binaries/darwin
 
-      - name: Download windows artifacts
-        if: success()
-        uses: actions/download-artifact@master
-        with:
-          name: windows-latest
-          path: binaries/windows
-
       - name: Move artifacts
         if: success()
         run: |
@@ -153,6 +146,7 @@ jobs:
           mv binaries/linux/bin.exe release/bs-let-linux-x64.exe
           mv package.json release/package.json
           mv copyPlatformBinaryInPlace.js release/copyPlatformBinaryInPlace.js
+          mv ppx.sh release/ppx-sh
           ls -l release          
 
       - name: Publish
