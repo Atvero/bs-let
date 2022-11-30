@@ -148,9 +148,13 @@ jobs:
           mv ppx.sh release/ppx-sh
           ls -l release          
 
+      - name: Authenticate with private NPM package
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
+
       - name: Publish
         working-directory: release
         if: success()
-        run: npm publish --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
